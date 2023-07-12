@@ -7,3 +7,19 @@
     text-align: center;
     font-size: 50px;
 }
+
+
+.btn1{
+    background: #EB5757;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 20px;
+    color: white;
+    font-family: 'Work Sans', sans-serif;
+     font-size: 20px;
+
+}
