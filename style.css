@@ -8,6 +8,10 @@
     font-size: 50px;
 }
 
+body{
+    font-family: 'Work Sans', sans-serif;
+
+}
 
 .btn1{
     background: #EB5757;
@@ -22,4 +26,44 @@
     font-family: 'Work Sans', sans-serif;
      font-size: 20px;
 
+}
+
+#cardcontainer{
+    margin-top: 50px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.col{
+
+    width: 400px !important;
+    height: 500px !important;
+    border-radius: 500px !important;
+}
+.card{
+    padding: 10px;
+        width: 387px !important;
+        height: 480px !important;
+       border-radius: 20px;
+    }
+    
+    
+    .card-img-top{
+        border-radius: 20px;
+        height: 540px;
+    }
+
+.bds{
+    float: right;
+    margin-left: 200px;
+    background: #FEF7F7;
+    height: 50px;
+    border-radius: 50px;
+
+}
+
+.fa-arrow-right{
+    color: #EB5757;
+    font-size: 30px;
 }
