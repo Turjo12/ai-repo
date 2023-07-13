@@ -1,4 +1,4 @@
-const loadAi = async(aibt, dataLimite) => {
+const loadAi = async(dataLimite) => {
     const url = `https://openapi.programming-hero.com/api/ai/tools`;
 
     const res = await fetch(url);
@@ -12,11 +12,18 @@ const loadAi = async(aibt, dataLimite) => {
 const  DisplayAi = (ais) => {
     const displayul = document.getElementById('cardcontainer')
 
+    const showAll = document.getElementById('btn-more');
+    if(ais.length > 6){
+      ais = ais.slice(0, 6)
+      showAll.classList.remove('d-none')
+    }
+    else{
+      showAll.classList.add('d-none')
+    
+    }
 
 
-
-
-
+    
 
 
     ais.forEach(ais => {
@@ -53,7 +60,7 @@ const  DisplayAi = (ais) => {
 
 
 
-
+togglespinner(false)
 
 
 };
@@ -82,26 +89,63 @@ const displayDetaisModal = aiBit =>{
   
 
 
-    const cardDetails = document.getElementById('cardDetails');
-    const CardDiv = document.createElement('div');
-    CardDiv.classList.add('package');
-    CardDiv.innerHTML = `
-    <p>${aiBit.description}</p>
-    `
-   cardDetails.appendChild(CardDiv)
+  //   const cardDetails = document.getElementById('cardDetails');
+  //   const CardDiv = document.createElement('div');
+  //   CardDiv.classList.add('package');
+  //   CardDiv.innerHTML = `
+  //   <p>${aiBit.description}</p>
+  //   `
+  //  cardDetails.appendChild(CardDiv);
 
 
+
+
+
+
+
+const displayimg = document.getElementById('cardDetailspic');
+displayimg.innerHTML =`
+<p>Website: </p>
+`
 
 }
 
 
+const prossessSerach = (dataLimite) => {
+  togglespinner(true)
+
+  loadAi();
+}
+
+
+
+const togglespinner = isLoading => {
+  const loaderSection = document.getElementById('spinner');
+  if(isLoading){
+    loaderSection.classList.remove('d-none')
+  }
+  else{
+    loaderSection.classList.add('d-none')
+  }
+}
+
+
+
+document.getElementById('btn-more').addEventListener('click', function(){
+  // start spinner
+prossessSerach()
+  
+})
 
 
 
 
 
 
-loadAi();
 
+
+
+loadAi(6);
+// prossessSerach(6)
 
 

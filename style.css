@@ -10,6 +10,7 @@
 
 body{
     font-family: 'Work Sans', sans-serif;
+    overflow-x: hidden;
 
 }
 
@@ -69,11 +70,140 @@ align-items: center;
 }
 .modal-body{
     justify-content: space-between;
+    overflow-x: hidden;
 }
 
 .btn-close{
     color: red !important;
+    /* background: #ff0000; */
 }
-/* .modal{
-    width: 1500px ;
-} */
+
+.package{
+    width: 80%;
+    background: #FEF7F7;
+    height: 511px;
+    font-size: 25px;
+    padding: 20px;
+    border-radius: 20px;
+    border: 2px solid salmon;
+    margin-left: -20px;
+}
+
+.mak{
+    margin-left: -160px;
+    width: 400px;
+    padding: 20px;
+}
+
+.w{
+    width: 100%;
+    border-radius: 20px !important;
+
+    height: 100%;
+}
+
+.one{
+    border-radius: 20px !important;
+
+    width: 432px;
+    background: #000;
+    height: 330px;
+    margin-left: 20px;
+}
+
+
+.xx{
+    width: 140px;
+    margin-left: 20px;
+    text-align: center;
+    align-items: center;
+    /* background: #ffffff; */
+    height: 100px;
+    /* background:  #000 !important; */
+    margin-bottom: 20px;
+    font-size: 15px;
+    padding: 0px !important;
+    display: flex;
+}
+.gr{
+    background: #ffffff;
+    color: #03A30A;
+}
+.or{
+    background: #ffffff;
+    color: #F28927;
+}
+.re{
+    background: #ffffff;
+    color: #EB5757;
+}
+.x{
+    margin-left: 0px !important;
+}
+.font{
+    font-size: 14px;
+}
+.ul{
+    margin-left: -20px;
+}
+
+.fonts{
+    font-size: 14px;
+  margin-left: 20px;
+}
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+.card{
+    width: 370px !important;
+    display: flex;
+    justify-content: center;
+    
+}
+body{
+margin-right: 0px;
+    overflow-x: hidden;
+    /* margin: auto; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: 20px !important; */
+}
+.package{
+    height: 600px;
+    width: 320px;
+}
+.container{
+    width: 400px;
+    height: 600px !important;
+}
+.modal-body {
+    display: block !important;
+}
+.packagess{
+    margin-left: -10px;
+    /* font-size: 20px !important; */
+}
+.one{
+
+
+margin-left: 200px;
+
+  }
+
+  .mak{
+display: block !important;
+margin-left: -300px;
+padding: 100px;
+}
+.one{
+    width: 300px;
+}
+}

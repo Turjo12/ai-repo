@@ -16,8 +16,17 @@
 <body>
 
   <main>
+
+
+
+
+
+
+
     <h1 class="heading">AI Universe Hub</h1>
-    <button class="btn btn1">Sort By Date</button>
+<div class="d-flex">
+  <button class="btn btn1">Sort By Date</button>
+</div>
     <section>
 
       <div class="row row-cols-1 row-cols-md-3 g-4" id="cardcontainer">
@@ -33,20 +42,68 @@
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg modal-dialog-centered">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button  class="btn-close" data-bs-dismiss="modal"  onclick="window.location.reload()"></button>
       </div>
+
       <div class="modal-body d-flex">
-      <div id="cardDetails"></div>
-      <div id="cardDetailspic">
-        <h1>sdsdasgdajsgd</h1>
+
+      <div id="cardDetails" class="d-flex">
+        <div class=" container ">
+
+         <div class="cx package">
+          <p>ChatGPT is an AI-powered chatbot platform that uses OpenAI's GPT technology to simulate human conversation.</p>
+          <div class=" packagess d-flex">
+            <div class="p-4 xx x gr">$10/month
+              Basic</div>
+            <div class="p-4 xx or">$50/month
+              Pro</div>
+            <div class="p-4 xx re">Contact 
+              us
+              Enterprise</div>
+          </div>
+
+<div class="text d-flex">
+<div class="font">
+  <h3>Features</h3>
+<ul class="ul"> 
+  <li>Customizable responses</li>
+  <li>Multilingual support</li>
+  <li>Seamless integration</li>
+</ul>
+</div>
+<div class="fonts">
+  <h3>Features</h3>
+<ul class="ul"> 
+  <li>FB Messenger</li>
+  <li>Slack</li>
+  <li>Telegram</li>
+</ul>
+</div>
+</div>
+
+
+
+
+         </div>
+        </div>
       </div>
+
+      <div class="mak d-flex" >
+        <div class="one">
+          <img class="w" src="/chatgpt_assistente.jpg" alt="">
+        <h4 class="text-center">Hi, how are you doing today?</h4>
+        <p>I'm doing well, thank you for asking. How can I assist you today?</p>
+        </div>
       </div>
+</div>
+
+</div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="window.location.reload()">Close</button>
+       
       </div>
     </div>
   </div>
@@ -56,8 +113,15 @@
 
 
     </section>
+    <section class="d-none" id="spinner">
+      <div class="d-flex justify-content-center">
+        <img  src="/1_CsJ05WEGfunYMLGfsT2sXA.gif" alt="">
+        <h1 id="classess">gh1</h1>
+     </div>
+    </section>
+    
 
-    <button id="show-all" class="btn btn1">show-all</button>
+    <button id="btn-more" class="btn btn1 d-none">show-all</button>
   </main>
 
 
