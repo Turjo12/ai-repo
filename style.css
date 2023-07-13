@@ -67,3 +67,13 @@ align-items: center;
     color: #EB5757;
     font-size: 30px;
 }
+.modal-body{
+    justify-content: space-between;
+}
+
+.btn-close{
+    color: red !important;
+}
+/* .modal{
+    width: 1500px ;
+} */

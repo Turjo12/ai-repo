@@ -4,24 +4,14 @@ const loadAi = async(aibt, dataLimite) => {
     const res = await fetch(url);
     const data = await res.json();
     DisplayAi(data.data.tools)
-    console.log(data.data.tools)
+    // console.log(data.data.tools)
 }
-// const loadAis = async(aibt) => {
-//     const url = `https://openapi.programming-hero.com/api/ai/tools`;
-//     const urls = `https://openapi.programming-hero.com/api/ai/tool/01`
-//     const res = await fetch(url);
-//     const data = await res.json();
-//     DisplayAi(data.data.tools)
-//     console.log(data.data.tools)
-// }
 
 
-const  DisplayAi = (ais ) => {
+
+const  DisplayAi = (ais) => {
     const displayul = document.getElementById('cardcontainer')
 
-
-
- 
 
 
 
@@ -44,10 +34,16 @@ const  DisplayAi = (ais ) => {
  <p class='pra'><i class="fa-regular fa-calendar-days"></i></i> ${ais.published_in
  }</p> 
 
- <button type="button" class="btn bds" data-bs-toggle="modal" data-bs-target="#exampleModal">
+ <button type="button" onclick='loadcardsss()'  class="btn bds" data-bs-toggle="modal" data-bs-target="#exampleModal">
  <i class="fa-solid fa-arrow-right"></i>
 </button>
  </div>
+
+
+
+
+
+ 
 
         </div>
       </div>
@@ -56,17 +52,55 @@ const  DisplayAi = (ais ) => {
     });
 
 
-} 
 
 
 
 
-function name(){
-  const names = document.getElementById('name')
-  names.innerText = `${ais.name}`
+};
+
+
+
+
+// display card details 
+const loadcardsss = async(aibt, dataLimite) => {
+  const urls = `https://openapi.programming-hero.com/api/ai/tool/01`;
+
+  const res = await fetch(urls);
+  const data = await res.json();
+  console.log(data.data)
+  displayDetaisModal(data.data)
 }
 
-        
+       
+
+const displayDetaisModal = aiBit =>{
+  // console.log(aiBit.tool_name)
+
+
+    const displayTitle = document.getElementById('exampleModalLabel');
+    displayTitle.innerText = aiBit.tool_name;
+  
+
+
+    const cardDetails = document.getElementById('cardDetails');
+    const CardDiv = document.createElement('div');
+    CardDiv.classList.add('package');
+    CardDiv.innerHTML = `
+    <p>${aiBit.description}</p>
+    `
+   cardDetails.appendChild(CardDiv)
+
+
+
+}
+
+
+
+
+
+
+
+
 loadAi();
 
 
